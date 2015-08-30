@@ -1,0 +1,48 @@
+{
+  "name": "parent-folder",
+  "version": "0.0.0",
+  "description": "Get the name of the parent folder.",
+  "main": "lib/index.js",
+  "config": {
+    "entry": "src/index.js"
+  },
+  "scripts": {
+    "build": "babel -o $npm_package_main $npm_package_config_entry",
+    "dist": "npm run lint && npm run build && npm test && npm run docs",
+    "docs": "jsdoc2md $npm_package_config_entry > api.md",
+    "lint": "eslint .",
+    "prepublish": "npm run dist",
+    "test": "mocha",
+    "watch": "npm run watch-build & npm run watch-test",
+    "watch-build": "npm run build -- --watch",
+    "watch-test": "npm run test -- -w"
+  },
+  "keywords": [
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danawoodman/parent-folder/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danawoodman/parent-folder.git"
+  },
+  "author": "Dana Woodman",
+  "homepage": "https://github.com/danawoodman/parent-folder#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "chai": "^3.2.0",
+    "eslint": "^1.2.1",
+    "eslint-plugin-nodeca": "^1.0.3",
+    "jsdoc-to-markdown": "^1.1.1",
+    "mocha": "^2.2.5",
+    "mocha-sinon": "^1.1.4",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0"
+  },
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
