@@ -1,6 +1,6 @@
 {
   "name": "parent-folder",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Get the name of the parent folder.",
   "main": "lib/index.js",
   "config": {
@@ -17,8 +17,7 @@
     "watch-build": "npm run build -- --watch",
     "watch-test": "npm run test -- -w"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/danawoodman/parent-folder/issues"
@@ -40,8 +39,7 @@
     "sinon": "^1.16.1",
     "sinon-chai": "^2.8.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "engines": {
     "node": ">=0.10.0"
   }
