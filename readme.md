@@ -38,6 +38,8 @@ parentFolder('/path/to/project/file.js', true)
 //=> 'project'
 ```
 
+Should also work on Windows. If it doesn't, please [submit an issue][issues].
+
 
 ## API
 
@@ -59,3 +61,4 @@ Run the test suite with `npm test` and linting with `npm run lint`, make sure te
 
 
 [author]: https://github.com/danawoodman
+[issues]: https://github.com/danawoodman/parent-folder/issues
