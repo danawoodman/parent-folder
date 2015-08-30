@@ -24,7 +24,7 @@ var parentFolder = require('parent-folder');
 
 // Assuming we're currently in:  /foo/bar/index.js
 
-// Defaults to current file of call:
+// Defaults to current folder of call:
 parentFolder()
 //=> 'bar'
 
