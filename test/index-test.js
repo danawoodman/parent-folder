@@ -8,10 +8,11 @@ describe('parentFolder', () => {
   })
 
   it('should return parent folder of file', () => {
-    expect(parentFolder('/some/path/to/index.html')).to.eql('to')
+    expect(parentFolder('/some/path/to/index.html', true)).to.eql('to')
   })
 
   it('should return last folder if passed a list of directories', () => {
     expect(parentFolder('/foo/bar/baz/')).to.eql('baz')
+    expect(parentFolder('/this/is/a/path')).to.eql('path')
   })
 })

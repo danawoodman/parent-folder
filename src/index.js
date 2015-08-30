@@ -8,16 +8,22 @@ import path from 'path'
  *
  * @module parentFolder
  * @param {String} [fullPath=module.parent.filename] The full path to find the parent folder from
+ * @param {Boolean} [isFile=false] Flag to indicate passed in path is to a file not a folder
  * @returns {String} The parent folder's name
  */
-export default function parentFolder(fullPath = module.parent.filename) {
-  const pathObj = path.parse(fullPath)
-
-  // Passed in path is a folder so use the name
-  // as the parent
-  if (fullPath.slice(-1) === path.sep) {
-    return pathObj.name
+export default function parentFolder(fullPath, isFile = false) {
+  // If no path passed in, use the file path of the
+  // caller.
+  if (!fullPath) {
+    fullPath = module.parent.filename
+    isFile = true
   }
 
-  return pathObj.dir.split(path.sep).slice(-1)[0]
+  const pathObj = path.parse(fullPath)
+
+  if (isFile) {
+    return pathObj.dir.split(path.sep).slice(-1)[0]
+  }
+
+  return pathObj.name
 }

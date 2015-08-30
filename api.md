@@ -10,4 +10,5 @@ to the parent folder of the call path.
 | Param | Type | Default | Description |
 | --- | --- | --- | --- |
 | [fullPath] | <code>String</code> | <code>module.parent.filename</code> | The full path to find the parent folder from |
+| [isFile] | <code>Boolean</code> | <code>false</code> | Flag to indicate passed in path is to a file not a folder |
 

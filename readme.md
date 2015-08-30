@@ -7,6 +7,8 @@
 
 > Get the name of the parent folder.
 
+For the given path return the name of the most immediate parent folder. Useful for scripts and generators where you want to use the parent folder name in some way (project naming, etc).
+
 
 ## Install
 
@@ -20,8 +22,20 @@ npm install --save parent-folder
 ```js
 var parentFolder = require('parent-folder');
 
-parentFolder('army of kittens');
-//=> 'Hello, army of kittens!'
+// Assuming we're currently in:  /foo/bar/index.js
+
+// Defaults to current file of call:
+parentFolder()
+//=> 'bar'
+
+// Passing in a path to a folder:
+parentFolder('/some/path/here')
+//=>  'here'
+
+// If using in a path to a file, make sure to
+// pass in `true` flag as the second parameter.
+parentFolder('/path/to/project/file.js', true)
+//=> 'project'
 ```
 
 
