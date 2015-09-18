@@ -4,6 +4,7 @@
 [![Dependency Status](https://img.shields.io/david/danawoodman/parent-folder.svg)](https://david-dm.org/danawoodman/parent-folder)
 [![View on npm](https://img.shields.io/npm/dm/parent-folder.svg)](https://www.npmjs.com/package/parent-folder)
 [![View on npm](https://img.shields.io/npm/v/parent-folder.svg)](https://www.npmjs.com/package/parent-folder)
+[![Code Climate](https://codeclimate.com/github/danawoodman/parent-folder/badges/gpa.svg)](https://codeclimate.com/github/danawoodman/parent-folder)
 
 > Get the name of the parent folder.
 
